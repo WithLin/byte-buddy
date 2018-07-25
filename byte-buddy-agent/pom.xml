@@ -110,6 +110,7 @@
                 <configuration>
                     <name>net.bytebuddy.agent</name>
                     <packages>net.bytebuddy.agent</packages>
+                    <exports>net.bytebuddy.agent</exports>
                 </configuration>
             </plugin>
         </plugins>

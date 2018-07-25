@@ -194,6 +194,7 @@
                 <configuration>
                     <name>net.bytebuddy</name>
                     <packages>${export.packages}</packages>
+                    <exports>${export.packages}</exports>
                 </configuration>
             </plugin>
         </plugins>
