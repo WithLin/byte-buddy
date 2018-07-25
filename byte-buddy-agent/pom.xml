@@ -91,11 +91,25 @@
                             ${attach.package.sun};resolution:="optional",
                             ${attach.package.ibm};resolution:="optional"
                         </Import-Package>
-                        <Export-Package>
-                            net.bytebuddy.agent
-                        </Export-Package>
-                        <Automatic-Module-Name>${project.groupId}.agent</Automatic-Module-Name>
+                        <Export-Package>net.bytebuddy.agent</Export-Package>
                     </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>codes.rafael.modulemaker</groupId>
+                <artifactId>modulemaker-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>make-module</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <name>net.bytebuddy.agent</name>
+                    <packages>net.bytebuddy.agent</packages>
                 </configuration>
             </plugin>
         </plugins>
